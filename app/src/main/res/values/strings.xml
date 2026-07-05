@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- AppBar & Navigation -->
+    <string name="settings">Settings</string>
+    <string name="information">Information</string>
+    <string name="help">Help</string>
+    <string name="back">Back</string>
+
+    <!-- Main Screen -->
+    <string name="app_name">Bagpipe Tuner</string>
+    <string name="version">Version 1.0</string>
+    <string name="no_signal">No signal</string>
+    <string name="base_tone">Base tone</string>
+    <string name="base_tone_label">Base tone (Low A)</string>
+    <string name="base_tone_hz">Base tone: %1$d Hz</string>
+
+    <string name="start_tuning">Start Tuning</string>
+    <string name="stop_tuning">Stop Tuning</string>
+    <string name="select_tuner_mode">Select Tuner Mode</string>
+
+    <string name="chanter">Chanter</string>
+    <string name="drones">Drones</string>
+
+    <string name="sound_type">Sound Type: %1$s</string>
+
+    <string name="custom_type_loaded">Custom sound type loaded – %1$d notes detected</string>
+    <string name="custom_type_invalid">Custom sound type: invalid values</string>
+
+    <string name="cent_display">%.1f Cent</string>
+    <string name="detected_tone">%1$s – %2$d Hz (%3$d Hz)</string>
+
+    <!-- Settings Screen -->
+    <string name="recording_time">Recording time: %1$d seconds</string>
+    <string name="animation_speed">Animation speed</string>
+    <string name="animation_speed_ms">%1$d ms</string>
+
+    <string name="select_sound_type">Select sound type</string>
+    <string name="new_band_sound">New Band Sound</string>
+    <string name="warm_sound">Warm Sound</string>
+    <string name="brilliant_sound">Brilliant Sound</string>
+    <string name="old_band_sound">Old Band Sound</string>
+    <string name="custom_sound_type">Custom sound type</string>
+
+    <string name="detected_pitch">Detected pitch: %1$d Hz</string>
+    <string name="record_base_tone">Record base tone</string>
+    <string name="recording_in_progress">Recording in progress…</string>
+
+    <!-- Custom Sound Section -->
+    <string name="record_custom_sound_section">Record custom sound type</string>
+    <string name="start_recording_note">Start</string>
+    <string name="recording_running">running</string>
+    <string name="start_runthrough">Start run‑through</string>
+    <string name="cancel_runthrough">Cancel run‑through</string>
+    <string name="delete_all">Delete All</string>
+
+    <!-- Notes (Bagpipe scale) -->
+    <string name="low_g">Low G</string>
+    <string name="low_a">Low A</string>
+    <string name="b_note">B</string>
+    <string name="c_sharp">C#</string>
+    <string name="d_note">D</string>
+    <string name="e_note">E</string>
+    <string name="f_sharp">F#</string>
+    <string name="high_g">High G</string>
+    <string name="high_a">High A</string>
+
+    <!--  Language  -->
+    <string name="current_language">Currently active: %1$s</string>
+    <string name="language_title">Language</string>
+    <string name="language">Language</string>
+
+    <!-- Various -->
+    <string name="warning_unstable">Unstable signal</string>
+</resources>

@@ -1,0 +1,66 @@
+<resources>
+    <!--  AppBar & Navigation  -->
+    <string name="settings">Settins</string>
+    <string name="information">Informatin</string>
+    <string name="help">Haunle</string>
+    <string name="back">Back</string>
+
+    <!--  Main Screen  -->
+    <string name="app_name">Pipes Tuner</string>
+    <string name="version">Version 1.0</string>
+    <string name="no_signal">Nae sign</string>
+    <string name="base_tone">Grund tune</string>
+    <string name="base_tone_label">Grund tune (Law A)</string>
+    <string name="base_tone_hz">Grund tune: %1$d Hz</string>
+    <string name="start_tuning">Stert Tunin</string>
+    <string name="stop_tuning">Stap Tunin</string>
+    <string name="select_tuner_mode">Wale Tuner Mode</string>
+    <string name="chanter">Chanter</string>
+    <string name="drones">Drones</string>
+    <string name="sound_type">Soond Kynd: %1$s</string>
+    <string name="custom_type_loaded">Ain soond kynd loadit – %1$d notes fund</string>
+    <string name="custom_type_invalid">Ain soond kynd: ill values</string>
+    <string name="cent_display">%.1f Cent</string>
+    <string name="detected_tone">%1$s – %2$d Hz (%3$d Hz)</string>
+
+    <!--  Settings Screen  -->
+    <string name="recording_time">Recordin time: %1$d seiconts</string>
+    <string name="animation_speed">Animaition speed</string>
+    <string name="animation_speed_ms">Animaition speed: %1$d ms</string>
+    <string name="select_sound_type">Wale soond kynd</string>
+    <string name="new_band_sound">New Band Soond</string>
+    <string name="warm_sound">Warm Soond</string>
+    <string name="brilliant_sound">Braw Soond</string>
+    <string name="old_band_sound">Auld Band Soond</string>
+    <string name="custom_sound_type">Ain soond kynd</string>
+    <string name="detected_pitch">Fund note: %1$d Hz</string>
+    <string name="record_base_tone">Record grund tune</string>
+    <string name="recording_in_progress">Recordin gaun on…</string>
+
+    <!--  Custom Sound Section  -->
+    <string name="record_custom_sound_section">Record ain soond kynd</string>
+    <string name="start_recording_note">Stert</string>
+    <string name="recording_running">rin</string>
+    <string name="start_runthrough">Stert rin‑throu</string>
+    <string name="cancel_runthrough">Cancel rin‑throu</string>
+    <string name="delete_all">Dicht Aw</string>
+
+    <!--  Notes (Bagpipe scale)  -->
+    <string name="low_g">Law G</string>
+    <string name="low_a">Law A</string>
+    <string name="b_note">B</string>
+    <string name="c_sharp">C#</string>
+    <string name="d_note">D</string>
+    <string name="e_note">E</string>
+    <string name="f_sharp">F#</string>
+    <string name="high_g">Heich G</string>
+    <string name="high_a">Heich A</string>
+
+    <!--  Language  -->
+    <string name="current_language">Noo acteeve: %1$s</string>
+    <string name="language_title">Leid</string>
+    <string name="language">Leid</string>
+
+    <!--  Various  -->
+    <string name="warning_unstable">Unstaunnin sign</string>
+</resources>

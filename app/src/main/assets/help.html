@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style>
+    body {
+        font-family: "Roboto", "Arial", sans-serif;
+        background-color: #ECECEC;
+        color: #222;
+        margin: 0;
+        padding: 52px 14px 10px 14px; /* Abstand unter Buttons */
+        line-height: 1.55;
+        font-size: 14px;
+        transition: font-size 0.2s ease;
+    }
+
+    h1, h2, h3 {
+        color: #004d40;
+        font-weight: 600;
+        margin-top: 1em;
+        margin-bottom: 0.4em;
+    }
+
+    h1 {
+        font-size: 1.3em;
+        border-bottom: 1px solid #004d40;
+        padding-bottom: 4px;
+    }
+
+    h2 {
+        font-size: 1.15em;
+        color: #00695c;
+    }
+
+    h3 {
+        font-size: 1.05em;
+        color: #00796b;
+    }
+
+    p, li {
+        font-size: 0.95em;
+        margin: 0.4em 0;
+    }
+
+    ul, ol {
+        margin-left: 1em;
+        padding-left: 0.6em;
+    }
+
+    hr {
+        border: none;
+        border-bottom: 1px solid #bbb;
+        margin: 16px 0;
+    }
+
+    table img {
+        border-radius: 6px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .section {
+        margin-bottom: 1.4em;
+    }
+
+    .footer {
+        font-size: 0.8em;
+        text-align: center;
+        color: #555;
+        margin-top: 2em;
+    }
+
+    .highlight {
+        background-color: #f7f7f7;
+        padding: 6px 10px;
+        border-left: 3px solid #00796b;
+        margin: 6px 0;
+        font-size: 0.92em;
+    }
+
+    /* --- Buttons links und rechts oben --- */
+    .font-controls-left,
+    .font-controls-right {
+        position: fixed;
+        top: 8px;
+        z-index: 1000;
+    }
+
+    .font-controls-left {
+        left: 8px;
+    }
+
+    .font-controls-right {
+        right: 8px;
+    }
+
+    .font-controls-left button,
+    .font-controls-right button {
+        background-color: #00796b;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .font-controls-left button:hover,
+    .font-controls-right button:hover {
+        background-color: #004d40;
+    }
+
+    /* --- responsives Tuning für sehr kleine Displays --- */
+    @media (max-width: 480px) {
+        body {
+            font-size: 13px;
+            padding: 48px 12px 8px 12px;
+        }
+        h1 { font-size: 1.2em; }
+        h2 { font-size: 1.1em; }
+        h3 { font-size: 1.0em; }
+    }
+</style>
+<body>
+
+    <!-- Buttons für Schriftgröße -->
+    <div class="font-controls-left">
+        <button onclick="changeFontSize(-1)">A–</button>
+    </div>
+
+    <div class="font-controls-right">
+        <button onclick="changeFontSize(1)">A+</button>
+    </div>
+
+    <script>
+        // feste Basisgröße in px
+        let baseFontSize = 14;
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // Nach dem Laden einmal explizit initialisieren:
+            document.body.style.fontSize = baseFontSize + 'px';
+        });
+
+        function changeFontSize(delta) {
+            baseFontSize += delta;
+            if (baseFontSize < 10) baseFontSize = 10;
+            if (baseFontSize > 24) baseFontSize = 24;
+            document.body.style.fontSize = baseFontSize + 'px';
+        }
+    </script>
+
+    <h2>
+        <img src="file:///android_res/drawable/startseite.png" width="152" height="322">
+    </h2>
+
+    <h1>Hilfe</h1>
+
+    <h2>Allgemeines</h2>
+    <p>Warum wird mir kein Ton angezeigt, warum reagiert die App nicht?</p>
+    <ul>
+        <li>Der Button "Start Tuning" muss aktiviert sein, sodass "Stop Tuning" angezeigt wird.</li>
+        <li>Die Berechtigungen für das Mikrofon fehlen. Bitte in die App‑Einstellungen
+            gehen und die Berechtigungen erteilen.</li>
+    </ul>
+
+    <p>Warum zeigt der Tuner auf meinem Smartphone nur merkwürdige Werte an?</p>
+    <ul>
+        <li>Das Mikrofon eines Smartphones ist nicht als Instrumentenmikrofon ausgelegt – schon gar nicht für die sehr hohen und schrillen Töne der Pipes. Oft kommt es auch mit der Vielzahl und Mischung der Obertöne nicht zurecht, sodass der eigentliche Ton 
+        schlecht erkannt wird.<br>
+        In solchen Fällen hilft ein externes, hochwertigeres Mikrofon. Die meisten Billigmikrofone sind mit den Pipes überfordert.</li>
+        <li>Beim Chanter mindestens einen Meter Abstand zum Mikrofon halten; bei den Drones kann das Mikrofon näher platziert werden.</li>
+    </ul>
+
+    <h2>Tipps</h2>
+    <ul>
+        <li>Stimme zuerst den Chanter sauber, bevor du mit den Drones arbeitest.</li>
+        <li>Vermeide Hintergrundgeräusche, um die Tonerkennung zu verbessern.</li>
+        <li>Halte beim Stimmen einen gleichmäßigen, konstanten Druck.</li>
+        <li>Für konsistente Messungen verwende die App bei konstanter Raumtemperatur.</li>
+    </ul>
+
+    <hr>
+    <div class="highlight">Die App wird „wie besehen“ ohne ausdrückliche oder
+      stillschweigende Gewährleistung oder Anspruch auf Garantie
+      bereitgestellt.</div>
+    <div class="footer">Made with love on the Canary Islands<br>
+        © 2026 Eric Helmvoigt, EH-Bagpipe-Tuner <br />
+        <a href="https://bagpipe-tuner.com/" target="_blank"
+           rel="noopener noreferrer"
+           title="Visit the home of Bagpipe-Tuner">
+            Visit Bagpipe-Tuner.com
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="14" height="14"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 aria-label="External link"
+                 role="img"
+                 style="vertical-align: middle; margin-left: 4px;">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style>
+    body {
+        font-family: "Roboto", "Arial", sans-serif;
+        background-color: #ECECEC;
+        color: #222;
+        margin: 0;
+        padding: 52px 14px 10px 14px;
+        line-height: 1.55;
+        font-size: 14px;
+        transition: font-size 0.2s ease;
+    }
+
+    h1, h2, h3 {
+        color: #004d40;
+        font-weight: 600;
+        margin-top: 1em;
+        margin-bottom: 0.4em;
+    }
+
+    h1 {
+        font-size: 1.3em;
+        border-bottom: 1px solid #004d40;
+        padding-bottom: 4px;
+    }
+
+    h2 {
+        font-size: 1.15em;
+        color: #00695c;
+    }
+
+    h3 {
+        font-size: 1.05em;
+        color: #00796b;
+    }
+
+    p, li {
+        font-size: 0.95em;
+        margin: 0.4em 0;
+    }
+
+    ul, ol {
+        margin-left: 1em;
+        padding-left: 0.6em;
+    }
+
+    hr {
+        border: none;
+        border-bottom: 1px solid #bbb;
+        margin: 16px 0;
+    }
+
+    table img {
+        border-radius: 6px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .section {
+        margin-bottom: 1.4em;
+    }
+
+    .footer {
+        font-size: 0.8em;
+        text-align: center;
+        color: #555;
+        margin-top: 2em;
+    }
+
+    .highlight {
+        background-color: #f7f7f7;
+        padding: 6px 10px;
+        border-left: 3px solid #00796b;
+        margin: 6px 0;
+        font-size: 0.92em;
+    }
+
+    /* --- Buttons left and right top --- */
+    .font-controls-left,
+    .font-controls-right {
+        position: fixed;
+        top: 8px;
+        z-index: 1000;
+    }
+
+    .font-controls-left {
+        left: 8px;
+    }
+
+    .font-controls-right {
+        right: 8px;
+    }
+
+    .font-controls-left button,
+    .font-controls-right button {
+        background-color: #00796b;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .font-controls-left button:hover,
+    .font-controls-right button:hover {
+        background-color: #004d40;
+    }
+
+    /* --- responsive tuning for very small displays --- */
+    @media (max-width: 480px) {
+        body {
+            font-size: 13px;
+            padding: 48px 12px 8px 12px;
+        }
+        h1 { font-size: 1.2em; }
+        h2 { font-size: 1.1em; }
+        h3 { font-size: 1.0em; }
+    }
+</style>
+<body>
+
+    <!-- Buttons for font size -->
+    <div class="font-controls-left">
+        <button onclick="changeFontSize(-1)">A–</button>
+    </div>
+
+    <div class="font-controls-right">
+        <button onclick="changeFontSize(1)">A+</button>
+    </div>
+
+    <script>
+        // fixed base size in px
+        let baseFontSize = 14;
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // Explicit initialization after loading:
+            document.body.style.fontSize = baseFontSize + 'px';
+        });
+
+        function changeFontSize(delta) {
+            baseFontSize += delta;
+            if (baseFontSize < 10) baseFontSize = 10;
+            if (baseFontSize > 24) baseFontSize = 24;
+            document.body.style.fontSize = baseFontSize + 'px';
+        }
+    </script>
+
+    <h2>
+        <img src="file:///android_res/drawable/startseite.png" width="152" height="322">
+    </h2>
+
+    <h1>Help</h1>
+
+    <h2>General</h2>
+    <p>Why is no tone displayed, why doesn't the app respond?</p>
+    <ul>
+        <li>The "Start Tuning" button must be active so that "Stop Tuning" is displayed.</li>
+        <li>The microphone permissions are missing. Please go to the app settings and grant the necessary permissions.</li>
+    </ul>
+
+    <p>Why does the tuner on my smartphone show strange values?</p>
+    <ul>
+        <li>The microphone of a smartphone is not designed as an instrument microphone—especially not for the very high and sharp tones of the pipes. It often cannot handle the mix and richness of overtones, making detection of the fundamental tone unreliable.<br>
+        In such cases, an external, higher-quality microphone can help. Most inexpensive microphones are overwhelmed by the pipes.</li>
+        <li>Keep at least one meter of distance between the chanter and the microphone; for the drones, the microphone can be placed closer.</li>
+    </ul>
+
+    <h2>Tips</h2>
+    <ul>
+        <li>Tune the chanter cleanly first before working on the drones.</li>
+        <li>Avoid background noise to improve tone detection.</li>
+        <li>Maintain a steady, consistent pressure when tuning.</li>
+        <li>For consistent measurements, use the app at a stable room temperature.</li>
+    </ul>
+
+    <hr>
+    <div class="highlight">The app is provided “as is” without any express or implied warranty or guarantee.</div>
+    <div class="footer">Made with love on the Canary Islands<br>
+        © 2026 Eric Helmvoigt, EH-Bagpipe-Tuner <br />
+        <a href="https://bagpipe-tuner.com/" target="_blank"
+           rel="noopener noreferrer"
+           title="Visit the home of Bagpipe-Tuner">
+            Visit Bagpipe-Tuner.com
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="14" height="14"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 aria-label="External link"
+                 role="img"
+                 style="vertical-align: middle; margin-left: 4px;">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+        </a>
+    </div>
+</body>
+</html>

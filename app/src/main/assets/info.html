@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+    body {
+        font-family: "Roboto", "Arial", sans-serif;
+        background-color: #ECECEC;
+        color: #222;
+        margin: 0;
+        padding: 46px 14px 10px 14px; /* Abstand unter Buttons */
+        line-height: 1.55;
+        font-size: 14px;
+        transition: font-size 0.2s ease;
+    }
+
+    h1, h2, h3 {
+        color: #004d40;
+        font-weight: 600;
+        margin-top: 1em;
+        margin-bottom: 0.4em;
+    }
+
+    h1 {
+        font-size: 1.3em;
+        border-bottom: 1px solid #004d40;
+        padding-bottom: 4px;
+    }
+
+    h2 {
+        font-size: 1.15em;
+        color: #00695c;
+    }
+
+    h3 {
+        font-size: 1.05em;
+        color: #00796b;
+    }
+
+    p, li {
+        font-size: 0.95em;
+        margin: 0.4em 0;
+    }
+
+    ul, ol {
+        margin-left: 1em;
+        padding-left: 0.6em;
+    }
+
+    hr {
+        border: none;
+        border-bottom: 1px solid #bbb;
+        margin: 16px 0;
+    }
+
+    table img {
+        border-radius: 6px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .section {
+        margin-bottom: 1.4em;
+    }
+
+    .footer {
+        font-size: 0.8em;
+        text-align: center;
+        color: #555;
+        margin-top: 2em;
+    }
+
+    .highlight {
+        background-color: #f7f7f7;
+        padding: 6px 10px;
+        border-left: 3px solid #00796b;
+        margin: 6px 0;
+        font-size: 0.92em;
+    }
+
+    /* --- Buttons links und rechts oben --- */
+    .font-controls-left,
+    .font-controls-right {
+        position: fixed;
+        top: 8px;
+        z-index: 1000;
+    }
+
+    .font-controls-left {
+        left: 8px;
+    }
+
+    .font-controls-right {
+        right: 8px;
+    }
+
+    .font-controls-left button,
+    .font-controls-right button {
+        background-color: #00796b;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .font-controls-left button:hover,
+    .font-controls-right button:hover {
+        background-color: #004d40;
+    }
+
+    /* etwas mehr Abstand nach oben für Text unter Buttons */
+    body {
+        font-family: "Roboto", "Arial", sans-serif;
+        background-color: #ECECEC;
+        color: #222;
+        margin: 0;
+        padding: 52px 14px 10px 14px; /* oberes Padding leicht erhöht */
+        line-height: 1.55;
+        font-size: 14px;
+        transition: font-size 0.2s ease;
+    }
+
+    .font-controls button:hover {
+        background-color: #004d40;
+    }
+
+    /* --- responsives Tuning für sehr kleine Displays --- */
+    @media (max-width: 480px) {
+        body {
+            font-size: 13px;
+            padding: 42px 12px 8px 12px;
+        }
+        h1 { font-size: 1.2em; }
+        h2 { font-size: 1.1em; }
+        h3 { font-size: 1.0em; }
+    }
+</style>
+<body>
+    <!-- Buttons für Schriftgröße -->
+    <div class="font-controls-left"> <button onclick="changeFontSize(-1)">A–</button>
+    </div>
+    <div class="font-controls-right"> <button onclick="changeFontSize(1)">A+</button>
+    </div>
+    <script>
+    // feste Basisgröße in px
+    let baseFontSize = 14;
+
+    window.addEventListener('DOMContentLoaded', () => {
+        // Nach dem Laden einmal explizit initialisieren:
+        document.body.style.fontSize = baseFontSize + 'px';
+    });
+
+    function changeFontSize(delta) {
+        baseFontSize += delta;
+        if (baseFontSize < 10) baseFontSize = 10;
+        if (baseFontSize > 24) baseFontSize = 24;
+        document.body.style.fontSize = baseFontSize + 'px';
+    }
+</script> <p><b><span style="font-size: large; color: #FF0000; ">Achtung,
+          Beta-Version<br>
+          <br>
+        </span></b> <img src="file:///android_res/drawable/logo.png" height="80"
+
+                         width="79"> </p>
+    <h1>Bagpipe Tuner – entwickelt von einem Piper für Piper</h1>
+    <p></p>
+    <p>Diese App ist ein Tuner, ein Stimmgerät für den schottischen Dudelsack,
+      die Great Highland Bagpipes (Pipes). Sie arbeitet wie ein klassisches
+      Stimmgerät, ist jedoch speziell für die Pipes ausgelegt. Die Pipes sind
+      nicht gleichstufig temperiert wie z. B. ein Klavier, sondern arbeiten mit
+      reinen bzw. angepassten Intervallen. Deshalb ist es sehr hilfreich, ein
+      speziell dafür entwickeltes Stimmgerät zu verwenden – es macht das Stimmen
+      der Pipes deutlich einfacher.<br>
+      Eine besondere Herausforderung sind die sehr hohen und recht schrillen
+      Töne des Chanters, die zugleich sehr reich an Obertönen sind. Dies macht
+      das Erkennen des eigentlichen Tons recht schwierig, besonders für ein
+      Mikrofon, das dafür nicht ausgelegt ist, wie das eines Smartphones.<br>
+      Belegte Messungen aus dem Jahr 1885 ergaben eine Tonhöhe von 441 Hz für
+      den Grundton des Chanters. Mitte der 1950er Jahre lag der
+      Durchschnittswert bereits bei 459 Hz. Heute bewegen wir uns bereits in
+      Richtung 480 Hz und darüber.</p>
+    <div class="highlight"> Die App ist Freeware und Open Source. Sie enthält
+      weder Werbung noch Tracker oder Cookies. Sie läuft vollständig auf deinem
+      Gerät und gewährleistet somit deine Privatsphäre. </div>
+    <p>Die Tuner‑App erkennt automatisch die gespielten Töne und zeigt an, wie
+      weit sie vom gewünschten Sollwert abweichen.</p>
+    <h2>Funktionen</h2>
+    <ul>
+      <li>Stimmgerät für Chanter und Drones</li>
+      <li>Der gewünschte Grundton ist einstellbar (per Eingabe oder Aufnahme)</li>
+      <li>Verschiedene Sound‑Typen ("New Band", "Warm", "Brillant", "Old Band"
+        sowie "Eigener Soundtyp")</li>
+      <li>Einstellbare Animationsgeschwindigkeit und Aufnahmezeit</li>
+      <li>Erstellen eines eigenen Soundtyps</li>
+    </ul>
+    <hr>
+    <h2>Hauptseite</h2>
+    <h2><img src="file:///android_res/drawable/hauptseite_de.png" height="322"
+
+             width="152"></h2>
+    <ol>
+      <li><b>Tuning‑Skala</b> – Visuelle Anzeige der Stimmung des aktuell
+        gespielten Tons.</li>
+      <li><b>Tuning‑Indikator</b> – Echtzeitanzeige, ob der Ton zu hoch, zu tief
+        oder genau richtig ist.</li>
+      <li><b>Tuner‑Display</b> – Zeigt Abweichung in Cent, Tonname und Frequenz.</li>
+      <li><b>Tuner‑Start</b> – Startet die Aufnahme fürs Tuning.</li>
+      <li><b>Grundton</b> – Anzeige des eingestellten Grundtons.</li>
+      <li><b>Tuner‑Modus</b> – Auswahl, ob Chanter oder Drones gestimmt werden
+        sollen.</li>
+      <li><b>Sound‑Type</b> – Anzeige des gewählten Sound‑Typs.</li>
+    </ol>
+    <hr>
+    <h2>Einstellungen</h2>
+    <h2><img src="file:///android_res/drawable/einstellungen1_de.png"
+
+             height="322" width="152"></h2>
+    <ol>
+      <li><b>Grundton</b> – Einstellung per Slider.</li>
+      <li><b>Anzeige</b> – aktueller Grundton</li>
+      <li><b>Grundton aufnehmen</b> – Aufnahme des Chanters zur Bestimmung.</li>
+      <li><b>Aufnahmezeit</b> – Einstellen der Dauer der Aufnahme.</li>
+      <li><b>Animationsgeschwindigkeit</b> – Einstellen der
+        Bewegungsgeschwindigkeit des Zeigers.</li>
+      <li><b>Soundtyp</b> – Auswahl des bevorzugten Typs.</li>
+    </ol>
+    <hr>
+    <h2>Der Soundtyp</h2>
+    <p>Im Laufe der Zeit haben sich Tonhöhen und Klangcharaktere der Pipes
+      verändert. Früher wurde meist nach Gehör gestimmt – heute orientiert sich
+      das Tuning an elektronischen Tunern und standardisierten Skalen.</p>
+    <hr>
+    <div class="highlight">Die App wird „wie besehen“ ohne ausdrückliche oder
+      stillschweigende Gewährleistung oder Anspruch auf Garantie
+      bereitgestellt.</div>
+    <div class="footer">Made with love on the Canary Islands<br>
+        © 2026 Eric Helmvoigt, EH-Bagpipe-Tuner <br />
+        <a href="https://bagpipe-tuner.com/"
+           rel="noopener noreferrer"
+           title="Visit the home of Bagpipe-Tuner">
+            Visit Bagpipe-Tuner.com
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="14" height="14"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 aria-label="External link"
+                 role="img"
+                 style="vertical-align: middle; margin-left: 4px;">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+        </a>
+    </div>
+</body>
+</html>

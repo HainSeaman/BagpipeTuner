@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        body {
+            font-family: "Roboto", "Arial", sans-serif;
+            background-color: #ECECEC;
+            color: #222;
+            margin: 0;
+            padding: 46px 14px 10px 14px;
+            line-height: 1.55;
+            font-size: 14px;
+            transition: font-size 0.2s ease;
+        }
+
+        h1, h2, h3 {
+            color: #004d40;
+            font-weight: 600;
+            margin-top: 1em;
+            margin-bottom: 0.4em;
+        }
+
+        h1 {
+            font-size: 1.3em;
+            border-bottom: 1px solid #004d40;
+            padding-bottom: 4px;
+        }
+
+        h2 {
+            font-size: 1.15em;
+            color: #00695c;
+        }
+
+        h3 {
+            font-size: 1.05em;
+            color: #00796b;
+        }
+
+        p, li {
+            font-size: 0.95em;
+            margin: 0.4em 0;
+        }
+
+        ul, ol {
+            margin-left: 1em;
+            padding-left: 0.6em;
+        }
+
+        hr {
+            border: none;
+            border-bottom: 1px solid #bbb;
+            margin: 16px 0;
+        }
+
+        table img {
+            border-radius: 6px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .section {
+            margin-bottom: 1.4em;
+        }
+
+        .footer {
+            font-size: 0.8em;
+            text-align: center;
+            color: #555;
+            margin-top: 2em;
+        }
+
+        .highlight {
+            background-color: #f7f7f7;
+            padding: 6px 10px;
+            border-left: 3px solid #00796b;
+            margin: 6px 0;
+            font-size: 0.92em;
+        }
+
+		.font-controls-left,
+		.font-controls-right {
+			position: fixed;
+			top: 8px;
+			z-index: 1000;
+		}
+
+		.font-controls-left {
+			left: 8px;
+		}
+
+		.font-controls-right {
+			right: 8px;
+		}
+
+		.font-controls-left button,
+		.font-controls-right button {
+			background-color: #00796b;
+			color: white;
+			border: none;
+			border-radius: 4px;
+			width: 26px;
+			height: 26px;
+			font-size: 13px;
+			cursor: pointer;
+		}
+
+		.font-controls-left button:hover,
+		.font-controls-right button:hover {
+			background-color: #004d40;
+		}
+
+		body {
+			font-family: "Roboto", "Arial", sans-serif;
+			background-color: #ECECEC;
+			color: #222;
+			margin: 0;
+			padding: 52px 14px 10px 14px;
+			line-height: 1.55;
+			font-size: 14px;
+			transition: font-size 0.2s ease;
+		}
+
+        .font-controls button:hover {
+            background-color: #004d40;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 13px;
+                padding: 42px 12px 8px 12px;
+            }
+            h1 { font-size: 1.2em; }
+            h2 { font-size: 1.1em; }
+            h3 { font-size: 1.0em; }
+        }
+    </style>
+      <title></title>
+  </head>
+  <body>
+    <div class="font-controls-left"> <button onclick="changeFontSize(-1)">A–</button></div>
+    <div class="font-controls-right"> <button onclick="changeFontSize(1)">A+</button></div>
+    <script>
+    let baseFontSize = 14;
+
+    window.addEventListener('DOMContentLoaded', () => {
+        document.body.style.fontSize = baseFontSize + 'px';
+    });
+
+    function changeFontSize(delta) {
+        baseFontSize += delta;
+        if (baseFontSize < 10) baseFontSize = 10;
+        if (baseFontSize > 24) baseFontSize = 24;
+        document.body.style.fontSize = baseFontSize + 'px';
+    }
+</script> 
+<p><b><span style="font-size: large; color: #FF0000; ">Attention,
+          Beta Version<br><br>
+        </span></b> <img src="file:///android_res/drawable/logo.png" height="80" width="79"> </p>
+    <h1>Bagpipe Tuner – developed by a piper for pipers</h1>
+    <p></p>
+    <p>This app is a tuner for the Scottish bagpipes, the Great Highland Bagpipes. It works like a classical tuning device but is specifically designed for pipes. Bagpipes are not tuned in equal temperament like a piano but use pure or adjusted intervals. Therefore, it is very useful to use a tuner specially developed for this purpose – it makes tuning the pipes much easier.<br>
+      A particular challenge is the extremely high and rather piercing tones of the chanter, which are very rich in overtones. This makes detecting the actual pitch quite difficult, especially for a microphone not designed for it, such as that of a smartphone.<br>
+      Documented measurements from 1885 showed a pitch of 441 Hz for the chanter’s fundamental tone. In the mid‑1950s, the average value was already about 459 Hz. Today, we are moving toward 480 Hz and even higher.</p>
+    <div class="highlight"> The app is freeware and open source. It contains no ads, no trackers, and no cookies. It runs entirely on your device, thus ensuring your privacy. </div>
+    <p>The tuner app automatically detects the tones being played and shows how far they deviate from the desired target pitch.</p>
+    <h2>Features</h2>
+    <ul>
+      <li>Tuner for chanter and drones</li>
+      <li>The desired fundamental tone can be set (manually or by recording)</li>
+      <li>Various sound types (“New Band”, “Warm”, “Brilliant”, “Old Band”, and “Custom Sound Type”)</li>
+      <li>Adjustable animation speed and recording time</li>
+      <li>Create your own sound type</li>
+    </ul>
+    <hr>
+    <h2>Main Page</h2>
+    <h2><img src="file:///android_res/drawable/hauptseite_en.png" height="322" width="152"></h2>
+    <ol>
+      <li><b>Tuning Scale</b> – Visual display showing the tuning of the currently played tone.</li>
+      <li><b>Tuning Indicator</b> – Real‑time display showing whether the note is too high, too low, or just right.</li>
+      <li><b>Tuner Display</b> – Shows deviation in cents, note name, and frequency.</li>
+      <li><b>Tuner Start</b> – Starts recording for tuning.</li>
+      <li><b>Fundamental Tone</b> – Displays the set fundamental pitch.</li>
+      <li><b>Tuner Mode</b> – Select whether to tune chanter or drones.</li>
+      <li><b>Sound Type</b> – Displays the selected sound type.</li>
+    </ol>
+    <hr>
+    <h2>Settings</h2>
+    <h2><img src="file:///android_res/drawable/einstellungen1_en.png" height="322" width="152"></h2>
+    <ol>
+      <li><b>Fundamental Tone</b> – Set via slider.</li>
+      <li><b>Display</b> – Shows current fundamental tone.</li>
+      <li><b>Record Fundamental Tone</b> – Record the chanter to determine pitch.</li>
+      <li><b>Recording Time</b> – Set duration of recording.</li>
+      <li><b>Animation Speed</b> – Adjust the needle’s movement speed.</li>
+      <li><b>Sound Type</b> – Select the preferred type.</li>
+    </ol>
+    <hr>
+    <h2>The Sound Type</h2>
+    <p>Over time, pitch and tonal character of pipes have changed. In earlier days, tuning was usually done by ear – today, tuning is based on electronic tuners and standardized scales.</p>
+    <hr>
+    <div class="highlight">The app is provided “as is” without any express or implied warranty or guarantee.</div>
+    <div class="footer">Made with love on the Canary Islands<br>
+        © 2026 Eric Helmvoigt, EH-Bagpipe-Tuner <br />
+        <a href="https://bagpipe-tuner.com/"
+           rel="noopener noreferrer"
+           title="Visit the home of Bagpipe-Tuner">
+            Visit Bagpipe-Tuner.com
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="14" height="14"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 aria-label="External link"
+                 role="img"
+                 style="vertical-align: middle; margin-left: 4px;">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+        </a>
+    </div>
+  </body>
+</html>
