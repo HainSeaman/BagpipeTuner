@@ -11,8 +11,8 @@ android {
         applicationId = "com.eh.bagpipetuner"
         minSdk = 26
         targetSdk = 36
-        versionCode = 2
-        versionName = "1.1"
+        versionCode = 3
+        versionName = "1.2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -90,8 +90,4 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
-
-    // --- Audio-Library TarsosDSP ---
-    implementation("be.tarsos.dsp:core:2.5")
-    implementation("be.tarsos.dsp:jvm:2.5")
 }
