@@ -7,7 +7,7 @@
 
     <!--  Main Screen  -->
     <string name="app_name">Pipes Tuner</string>
-    <string name="version">Version 1.0</string>
+    <string name="version">Version 1.3</string>
     <string name="no_signal">Nae sign</string>
     <string name="base_tone">Grund tune</string>
     <string name="base_tone_label">Grund tune (Law A)</string>

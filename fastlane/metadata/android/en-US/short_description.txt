@@ -1,1 +1,1 @@
-A tuner specifically designed for the Great Highland Bagpipe
+A tuner specifically designed for the scottish Great Highland Bagpipe (GHB)

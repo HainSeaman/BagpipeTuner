@@ -8,7 +8,7 @@
 
     <!-- Main Screen -->
     <string name="app_name">Bagpipe Tuner</string>
-    <string name="version">Version 1.0</string>
+    <string name="version">Version 1.3</string>
     <string name="no_signal">No signal</string>
     <string name="base_tone">Base tone</string>
     <string name="base_tone_label">Base tone (Low A)</string>
