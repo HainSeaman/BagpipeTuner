@@ -1,0 +1,3 @@
+Bagpipe Tuner is a tuner app for the Great Highland Bagpipe, also known as Scottish bagpipes.
+
+It works like a traditional tuner, but is specifically designed for the tuning requirements of the Great Highland Bagpipe. But with many more features.
